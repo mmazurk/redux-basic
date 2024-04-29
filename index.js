@@ -28,12 +28,15 @@ function restockCake(quantity = 1) {
   };
 }
 
+// action creator
 function orderIceCream(quantity = 1) {
   return {
     type: ICE_CREAM_ORDERED,
     payload: quantity,
   };
 }
+
+// action creator
 function restockIceCream(quantity = 1) {
   return {
     type: ICE_CREAM_RESTOCKED,

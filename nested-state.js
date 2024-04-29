@@ -24,7 +24,7 @@ const initialState = {
   },
 };
 
-// reducer
+// reducer using produce() from immer
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case STREET_UPDATED:
@@ -40,6 +40,7 @@ const reducer = (state = initialState, action) => {
 
 const store = createStore(reducer);
 
+// We would normally use a logger here
 const unsubscribe = store.subscribe(() => {
   console.log("State is", store.getState());
 });
